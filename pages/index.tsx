@@ -86,6 +86,12 @@ const Home: NextPage = ({ images }: { images: ImageProps[] }) => {
               </Link>
             </div>
           </div>
+          <Link
+            href="/games"
+            className="mb-5 block w-full pointer rounded-lg border text-center border-white bg-white px-3 py-2 text-sm font-semibold text-black transition hover:bg-white/10 hover:text-white md:mt-4"
+            >
+            Games and experiments I've made
+          </Link>
           {images.map(({ id, public_id, format, blurDataUrl }) => (
             <Link
               key={id}
@@ -96,7 +102,7 @@ const Home: NextPage = ({ images }: { images: ImageProps[] }) => {
               className="after:content group relative mb-5 block w-full cursor-zoom-in after:pointer-events-none after:absolute after:inset-0 after:rounded-lg after:shadow-highlight"
             >
               <Image
-                alt="Next.js Conf photo"
+                alt="Austin Curtis photo"
                 className="transform rounded-lg brightness-90 transition will-change-auto group-hover:brightness-110"
                 style={{ transform: 'translate3d(0, 0, 0)' }}
                 placeholder="blur"
