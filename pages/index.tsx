@@ -33,11 +33,11 @@ const Home: NextPage = ({ images }: { images: ImageProps[] }) => {
         <title>Austin Curtis personal website</title>
         <meta
           property="og:image"
-          content="https://nextjsconf-pics.vercel.app/og-image.png"
+          content="https://res.cloudinary.com/https-auss-io/image/upload/v1593732990/auss.io/home_gallery/UNADJUSTEDNONRAW_thumb_5e9_mpfken.jpg"
         />
         <meta
           name="twitter:image"
-          content="https://nextjsconf-pics.vercel.app/og-image.png"
+          content="https://res.cloudinary.com/https-auss-io/image/upload/v1593732990/auss.io/home_gallery/UNADJUSTEDNONRAW_thumb_5e9_mpfken.jpg"
         />
       </Head>
       <main className="mx-auto max-w-[1960px] p-4">
