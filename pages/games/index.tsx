@@ -3,6 +3,10 @@ import * as PIXI from 'pixi.js';
 import Head from 'next/head'
 import { useEffect, useState } from 'react';
 
+interface LooseObject {
+  [key: string]: any
+}
+
 function rocket(totalDudes) {
   // holder to store the aliens
   const aliens = [];
@@ -10,7 +14,7 @@ function rocket(totalDudes) {
   for (let i = 0; i < totalDudes; i++)
   {
       // create a new Sprite that uses the image name that we just generated as its source
-      const dude = PIXI.Sprite.from('gameImages/sample.png');
+      const dude = PIXI.Sprite.from('gameImages/sample.png') as LooseObject;
 
       // set the anchor point so the texture is centered on the sprite
       dude.anchor.set(0.5);
@@ -104,12 +108,13 @@ const Home: NextPage = () => {
     }
   }, [isPixiLoaded,numDudes])
 
+  const pixiSrc = process.env.NODE_ENV === "development" ? "https://pixijs.download/release/pixi.js" : "https://pixijs.download/release/pixi.min.js"
+
   return (
     <>
       <Head>
         <title>Some games I've made</title>
-        <script src="https://pixijs.download/release/pixi.js" />
-        {/* <script src="https://pixijs.download/release/pixi.min.js" /> */}
+        <script src={pixiSrc} />
       </Head>
       <main className="mx-auto max-w-[1960px] p-4 text-white">
         <h1>Games here pls</h1>
