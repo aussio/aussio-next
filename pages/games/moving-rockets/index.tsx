@@ -118,7 +118,7 @@ const Home: NextPage = () => {
         <h1>Games here pls</h1>
         <div className="w-full h-96 border-dashed border-2 border-sky-500" id="firstExample"/>
         <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={() => setNumDudes(numDudes+1)}>{`More rockets: ${numDudes}`}</button>
-        <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded" onClick={() => {setNumDudes(1); app.stage.removeChildren()}}>Reset</button>
+        <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded" onClick={() => {app.stage.removeChildren(); setNumDudes(1)}}>Reset</button>
       </main>
     </>
   )
