@@ -13,11 +13,10 @@ const Home: NextPage = () => {
     const element = document.getElementById("example")
     const app = initApp(element)
     element.appendChild(app.view)
-    start()
   }, [])
   
   useEffect(()=> {
-    setUpSprites()
+    start()
   }, [render])
 
   return (
