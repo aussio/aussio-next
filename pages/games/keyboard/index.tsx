@@ -3,7 +3,7 @@ import Head from 'next/head'
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 
-import { initApp, start, reset } from '../../../components/games/keyboard';
+import { initApp, start, reset, setUpSprites } from '../../../components/games/keyboard';
 
 const Home: NextPage = () => {
 
@@ -17,6 +17,7 @@ const Home: NextPage = () => {
   }, [])
   
   useEffect(()=> {
+    setUpSprites()
   }, [render])
 
   return (

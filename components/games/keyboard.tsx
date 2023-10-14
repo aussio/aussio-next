@@ -73,7 +73,7 @@ let ySpeed = 0
 let speedText
 let locationText
 
-function setUpSprites() {
+export function setUpSprites() {
   bunny = new PIXI.Container()
   speedText = new PIXI.Text()
   locationText = new PIXI.Text()
