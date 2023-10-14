@@ -6,6 +6,8 @@ import Link from 'next/link';
 import { initApp, start, reset } from '../../../components/games/keyboard';
 
 const Home: NextPage = () => {
+
+  const [render, rerender] = useState(false);
   
   useEffect(()=> {
     const element = document.getElementById("example")
@@ -13,6 +15,10 @@ const Home: NextPage = () => {
     element.appendChild(app.view)
     start()
   }, [])
+  
+  useEffect(()=> {
+    start()
+  }, [render])
 
   return (
     <>
@@ -29,6 +35,7 @@ const Home: NextPage = () => {
         <h1>Arrow keys to move</h1>
         <div className="w-full h-3/4 border-dashed border-2 border-sky-500" id="example"/>
         <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded" onClick={() => {reset()}}>Reset</button>
+        <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded" onClick={() => {rerender(!render)}}>Reload</button>
       </main>
     </>
   )
