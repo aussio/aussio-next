@@ -3,7 +3,7 @@ import Head from 'next/head'
 import { useEffect } from 'react';
 import Link from 'next/link';
 
-import { initApp, start, reset } from './keyboard';
+import { initApp, start, reset } from '../../../components/games/keyboard';
 
 const Home: NextPage = () => {
   
