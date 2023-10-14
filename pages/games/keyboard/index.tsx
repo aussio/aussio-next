@@ -17,7 +17,6 @@ const Home: NextPage = () => {
   }, [])
   
   useEffect(()=> {
-    start()
   }, [render])
 
   return (
