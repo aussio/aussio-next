@@ -4,12 +4,12 @@ export let app: PIXI.Application<HTMLCanvasElement>
 
 export function initApp(element) {
   app = new PIXI.Application<HTMLCanvasElement>({ background: '#1099bb', resizeTo: element })
+  setUpKeyboard()
+  setUpSprites()
   return app
 }
 
 export function start() {
-  setUpKeyboard()
-  setUpSprites()
   // Listen for animate update
   app.ticker.add((delta) => gameLoop(delta));
 }
