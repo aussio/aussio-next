@@ -3,4 +3,7 @@ module.exports = {
     formats: ['image/avif', 'image/webp'],
     domains: ['res.cloudinary.com'],
   },
+  optimization: {
+    minimize: false,
+  },
 }
