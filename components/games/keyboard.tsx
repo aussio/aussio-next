@@ -1,9 +1,9 @@
 import * as PIXI from 'pixi.js';
 
-export let app: PIXI.Application<HTMLCanvasElement>
+export let app: PIXI.Application
 
 export function initApp(element) {
-  app = new PIXI.Application<HTMLCanvasElement>({ background: '#1099bb', resizeTo: element })
+  app = new PIXI.Application({  resizeTo: element })
   setUpKeyboard()
   setUpSprites()
   return app

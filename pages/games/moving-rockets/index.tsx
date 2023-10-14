@@ -85,7 +85,7 @@ function rocket(app, totalDudes) {
   });
 }
 
-let app: PIXI.Application<HTMLCanvasElement>
+let app: PIXI.Application
 
 const Home: NextPage = () => {
 
@@ -94,7 +94,7 @@ const Home: NextPage = () => {
 
   useEffect(() => {
     const element = document.getElementById("firstExample")
-    app = new PIXI.Application<HTMLCanvasElement>({ resizeTo: element });
+    app = new PIXI.Application({ resizeTo: element });
     element.appendChild(app.view)
     setNumDudes(1)
   }, []);
