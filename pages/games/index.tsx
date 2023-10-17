@@ -11,7 +11,7 @@ export default function Home() {
         description={"🚀 Simplest setup connected to a React button"} 
         />
       <GameLink
-        link={"/games/keyboard"} 
+        link={"https://aussio.github.io/"} 
         imgUrl={"https://res.cloudinary.com/https-auss-io/image/upload/v1697251499/auss.io/games/gsmgjsxv6dhyhcjwyg0o.png"} 
         description={"⌨️ Keyboard movement"} 
         />
